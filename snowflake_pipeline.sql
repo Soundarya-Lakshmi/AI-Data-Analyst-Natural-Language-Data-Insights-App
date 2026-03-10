@@ -1,3 +1,4 @@
+// Setting up database and file format
 CREATE DATABASE HOTEL_DB;
 
 CREATE OR REPLACE FILE FORMAT FF_CSV
@@ -9,6 +10,7 @@ CREATE OR REPLACE FILE FORMAT FF_CSV
 CREATE OR REPLACE STAGE STG_HOTEL_BOOKINGS
     FILE_FORMAT = FF_CSV;
 
+// Bronze Table
 CREATE TABLE BRONZE_HOTEL_BOOKINGS (
     booking_id STRING,
     hotel_id STRING,
@@ -30,6 +32,7 @@ FROM @STG_HOTEL_BOOKINGS
 FILE_FORMAT = (FORMAT_NAME = FF_CSV)
 ON_ERROR = 'CONTINUE';
 
+// Silver Table
 CREATE TABLE SILVER_HOTEL_BOOKINGS (
     booking_id VARCHAR,
     hotel_id VARCHAR,
@@ -73,6 +76,7 @@ SELECT
     AND TRY_TO_DATE(check_out_date) IS NOT NULL
     AND TRY_TO_DATE(check_out_date) >= TRY_TO_DATE(check_in_date); //Removed the rows with check_out_dates lesser than check_in_date
 
+// Gold Table 
 CREATE TABLE GOLD_HOTELBOOKINGS AS
 SELECT *, 
     CASE WHEN CURRENCY='INR' THEN ROUND(TOTAL_AMOUNT/83,1)
