@@ -20,24 +20,8 @@ The AI automatically performs the required data aggregation, filtering, or visua
 
 # Workflow
 
-Raw Dataset
-   |
-Data Cleaning & Transformation
-(Bronze → Silver → Gold layers in Snowflake)
-   |
-Clean Analytics Dataset
-   |
-Python Application
-   |
-Integration with Gemini LLM via API
-   |
-AI converts Natural Language Questions → Executable Pandas Code
-   |
-Code Execution on Dataset
-   |
-Results & Visualizations Generated
-   |
-Streamlit Web Interface for User Interaction
+![workflow](https://github.com/user-attachments/assets/250f22eb-32ad-4c42-a544-d01e4c08df68)
+
 
 # Workflow Explanation
 
