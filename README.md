@@ -1,5 +1,9 @@
 # AI-Data-Analyst-Natural-Language-Data-Insights-App
 
+![pic1](https://github.com/user-attachments/assets/c983d2af-51a8-4a98-8449-efdab63c0018)
+![pic2](https://github.com/user-attachments/assets/b9d8d709-5d8f-484f-a10a-8bfbae2e6eb9)
+![pic3](https://github.com/user-attachments/assets/1133bc87-3a31-42ed-9bec-29720da7d090)
+
 # Project Overview
 
 This project is an AI-powered analytics assistant that allows users to ask questions in natural language and receive data insights instantly.
